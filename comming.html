@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+<center>  <h1 id="smoke-effect">Coming Soon......</h1></center>
+  <script>
+    function getRandomColor() {
+      const colors = ['#FFA500', '#008000', '#0000FF']; // Orange, Green, Blue
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    function applyRandomColor() {
+      const smokeEffect = document.getElementById('smoke-effect');
+      const randomColor = getRandomColor();
+      smokeEffect.style.color = randomColor;
+    }
+
+    // Call the function after the body has loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      setInterval(applyRandomColor, 100);
+    });
+  </script>
+</body>
+</html>

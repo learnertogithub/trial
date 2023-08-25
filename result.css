@@ -1,0 +1,71 @@
+body
+{
+margin: 0px;
+padding: 0px;
+}
+#h1
+{
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf47YhiqVZBRKso1w3oRmFi73NwmmP3DZ6pA&usqp=CAU");
+background-repeat: no-repeat;
+background-position: left;
+background-size: cover;
+color:blue;
+padding-left: 200px;
+margin-top: 10px;
+font-size: 30px;
+}
+#Pin{
+margin-bottom: 100px;
+padding-left: 100px;
+}
+#pinbar
+{
+width:180px;
+height:30px;
+border-radius: 5px;
+margin-left:  30px;
+}
+#pinbar:hover
+{
+border-style: ridge;
+width:200px;
+}
+#form
+{
+margin-left: 200px;
+margin-top: 60px;
+font-size: 24px;
+}
+#select
+{
+font-size: 20px;
+margin-left: 30px;
+
+}
+#sem{
+padding-left: 400px;
+margin-left:
+}
+#semester
+{
+margin-left: 200px;
+}
+#submit
+{
+padding-top: 50px;
+padding-left: 300px;
+}
+#imageContainer
+{
+margin-left: 0px;
+}
+footer p{
+position: absolute;
+bottom: 0;
+left:40px;
+font-size: 20px;
+background:grey;
+}
+#error{
+font-size: 50px;
+}

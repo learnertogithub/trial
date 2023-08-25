@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SbtetAudistudentsdiplomaresults</title>
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNb84NvywWV84SQHt0lirZfljHvZx1y6sFzrorFtKoyl0R2wnrj85eETjNvdipDhQkT-o&usqp=CAU" type="image/jpg">
+  <link rel="stylesheet" href="result.css">
+</head>
+<body>
+  <div id="h1">
+    <h1>Diploma Results</h1>
+  </div>
+  <div id="form">
+    <form onsubmit="return openFile(event)">
+      <label for="pinbar">Pin:</label>
+      <input id="pinbar" type="text" size="20" required>
+      <br>
+      <div id="submit">
+        <button type="submit">Submit</button>
+      </div
+    </form>
+  </div>
+  <header id="header">
+    <ul>
+      <li>Home</li>
+      <li>Contact Us</li>
+    </ul>
+  </header>
+  <div id="footer">
+    <footer id="footer">
+      &copy; Copy Rights Reserved With Final Year Students
+    </footer>
+  </div>
+  <script>
+    function openFile(event) {
+      event.preventDefault(); // Prevent form submission
+
+      var pinbar = document.getElementById("pinbar").value;
+
+      switch (pinbar) {
+        case "21280-CM-016":
+          var filePath = "Dipoma1stresultspdf.pdf"; // Replace with the actual file path on the user's system
+          window.open(filePath);
+          break;
+          case "21280-CM-026":
+            var filePath = "Vinaya-Vidheya-Rama-2019.MP4"; // Replace with the actual file path on the user's system
+            window.open(filePath);
+            break;
+
+        default:
+          alert("Invalid PIN");
+          break;
+      }
+    }
+  </script>
+</body>
+</html>

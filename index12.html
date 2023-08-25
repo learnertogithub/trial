@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+#top {
+  margin-top: 40px;
+  margin-left: 30px;
+  display: block;
+  position: sticky;
+}
+
+#bar {
+  margin-top: 20px;
+}
+
+.top_bars {
+  margin-left: 20px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  border: none;
+  color: blue;
+}
+
+#content {
+  margin-top: 20px;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <div id="top">
+    <center>
+      <h1 style="font-size: 60px;">Diploma Audisankara Website</h1>
+    </center>
+    <p style="font-style: italic">Created By Sai Anvesh</p>
+    <p style="font-style: italic"> Updated on: 14:31 05-08-2023</p>
+  </div>
+  <div id="bar">
+    <button v-for="(section, index) in sections" :key="index" @click="loadContent(section.fileName)" class="top_bars">{{ section.label }}</button>
+  </div>
+  <div id="content">
+    <component :is="currentComponent"></component>
+  </div>
+</div>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    sections: [
+      { label: 'HOME', fileName: 'intro' },
+      { label: 'Results', fileName: 'result' },
+      { label: 'Contact us', fileName: 'qwer' },
+      { label: 'Login', fileName: 'login' }
+    ],
+    currentComponent: 'intro-component' // Default component
+  },
+  methods: {
+    loadContent: function (pageName) {
+      this.currentComponent = pageName + '-component';
+    }
+  }
+});
+</script>
+</body>
+</html>
